@@ -3,6 +3,20 @@ import numpy as np
 from scipy.linalg import lu
 from fractions import Fraction
 
+matriz2x2 = np.array([[3.0,-2.0],[2.0,-2.0]])#matriz A en R2
+matrizVectoresImpropios = np.array([[2.0,1.0],[1.0,2.0]])#Matriz de vectores impropios
+
+matriz = np.array([[1.0,0.0,0.0],[-4.0,1.0,0.0],[3.0,6.0,2.0]])#matriz A en R3
+matrizVectoresImpropiosR3 = np.array([[0,-1/4,0],[1,-7/8,0],[-6,0,1]])#matriz vectores impropios
+vectorA = np.array([0,1,-6])
+ecuacionValoresPropiosR3(matriz)#calcula los valores propios y la ecuacion
+calculoVectorImpropioR3(matriz,1)#encuentra la matriz gauss jordan del vector propio respectivo   
+calculoVectorImpropioR3(matriz,2) 
+
+vectorAsociadoR3(matriz,vectorA)
+matrizJCJ(matriz,matrizVectoresImpropiosR3)
+
+
 def raicesPolinomio(a,b,c,d):
     divisores = []
     raices = []
@@ -92,23 +106,9 @@ def solucionGeneralR2(matrizVectoresImpropios):
     print("")
     print("multiplique a * b")
 
-matriz2x2 = np.array([[3.0,-2.0],[2.0,-2.0]])#matriz A en R2
-matrizVectoresImpropios = np.array([[2.0,1.0],[1.0,2.0]])#Matriz de vectores impropios
 
-matriz = np.array([[1.0,0.0,0.0],[-4.0,1.0,0.0],[3.0,6.0,2.0]])#matriz A en R3
-matrizVectoresImpropiosR3 = np.array([[0,-1/4,0],[1,-7/8,0],[-6,0,1]])#matriz vectores impropios
-vectorA = np.array([0,1,-6])
-ecuacionValoresPropiosR3(matriz)#calcula los valores propios y la ecuacion
-calculoVectorImpropioR3(matriz,1)#encuentra la matriz gauss jordan del vector propio respectivo   
-calculoVectorImpropioR3(matriz,2) 
 
-vectorAsociadoR3(matriz,vectorA)
-matrizJCJ(matriz,matrizVectoresImpropiosR3)
-
-#matrizVectoresImpropiosr3 = np.array([[1,1,2],[-4,0,1],[1,-1,2]])
 #raicesPolinomio(1,-6,-15,-8)
-
- 
 #matrizR2(matriz2x2)
 #solucionGeneralR2(matrizVectoresImpropios)
 #ecuacionValoresPropiosR3(matriz)
